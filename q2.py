@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 try:
     input = raw_input
 except:

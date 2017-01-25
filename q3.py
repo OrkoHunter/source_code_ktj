@@ -1,9 +1,11 @@
-from math import sqrt
+#!/usr/bin/env python
 
 try:
     input = raw_input
 except:
     pass
+
+from math import sqrt
 
 def F(n):
     """Return nth fibonacci number"""
