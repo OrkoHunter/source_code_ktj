@@ -21,12 +21,10 @@ def largest_palindrome(text):
 if __name__ == '__main__':
     no = input()
     try:
-        if int(no) == 1:
-            print(1)
-        elif int(no) == 2:
+        if int(no) in [0, 1, 2]:
             print(1)
         else:
             p = largest_palindrome(bin(int(no))[2:])
-            print(p)
+            print(len(p))
     except Exception as e:
         print(0)
