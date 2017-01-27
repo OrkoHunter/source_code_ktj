@@ -37,7 +37,7 @@ def numberify(text):
 
 
 if __name__ == '__main__':
-    text_a = '27012017'  # Date of event
+    text_a = '29012017'  # Date of event
     text_b = input()
     accepted_chars = string.ascii_letters + '0123456789'
     to_continue = True
