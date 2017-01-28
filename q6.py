@@ -2,21 +2,35 @@
 
 try:
     input = raw_input
-except:
+except Exception as e:
     pass
 
-def ktj_in_string(text):
-    count = 0
-    for char in text:
-        if char in ['k', 's', 'h', 'i', 't', 'j']:
-            count += 1
-    return count
+import math
+
+def calculate(no):
+    # Diff of no and reverse
+    d = int(no) - int(''.join(list(reversed(no))))
+
+    # Alternate digits' factorial series
+    sum = 0
+    to_add = True
+    for i in no:
+        if to_add:
+            sum += math.factorial(int(i))
+            to_add = False
+        else:
+            sum -= math.factorial(int(i))
+            to_add = True
+
+    final = sum * d
+
+    return abs(final)
 
 if __name__ == '__main__':
-    text = input()
-    n = 0
+    no = input()
     try:
-        n = ktj_in_string(text.lower())
+        t = calculate(no)
+        print(t)
     except Exception as e:
-        pass
-    print(n)
+        print(0)
+        
